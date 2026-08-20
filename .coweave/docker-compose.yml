@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .coweave/Dockerfile.test-runner
+    working_dir: /repo
+    command: ["sleep", "infinity"]
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+      - NODE_ENV=test

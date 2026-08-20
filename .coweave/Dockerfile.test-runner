@@ -1,0 +1,44 @@
+# Multi-runtime test runner for polyglot repo (Python + Node)
+# Base: Node 20 LTS (for frontend Vitest tests)
+FROM node:20-bookworm-slim
+
+# Install Python 3.11 + pip for backend pytest tests
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        python3.11 \
+        python3-pip \
+        python3.11-venv && \
+    rm -rf /var/lib/apt/lists/* && \
+    ln -sf /usr/bin/python3.11 /usr/bin/python && \
+    ln -sf /usr/bin/python3.11 /usr/bin/python3
+
+# Python env vars for test output
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1
+
+# Node env var for tests
+ENV NODE_ENV=test
+
+WORKDIR /repo
+
+# Backend (Python): install dependencies
+COPY backend/requirements.txt /repo/backend/requirements.txt
+RUN pip3 install --no-cache-dir -r /repo/backend/requirements.txt
+
+# Frontend (Node): install dependencies (no lockfile, so use npm install not npm ci)
+COPY frontend/package.json /repo/frontend/package.json
+WORKDIR /repo/frontend
+RUN npm pkg delete scripts.preinstall scripts.install scripts.postinstall scripts.prepare && \
+    npm install --ignore-scripts && \
+    npm rebuild .
+
+# Copy full source
+WORKDIR /repo
+COPY . .
+
+# Strip lifecycle hooks from the final tree to prevent runtime recursion
+WORKDIR /repo/frontend
+RUN npm pkg delete scripts.preinstall scripts.install scripts.postinstall scripts.prepare && \
+    npm pkg delete scripts.preinstall scripts.install scripts.postinstall scripts.prepare --workspaces 2>/dev/null || true
+
+WORKDIR /repo

@@ -1,0 +1,31 @@
+apiVersion: coweave.ai/v2
+kind: TestEnvironment
+
+metadata:
+  name: cw-test-polyglot
+  generatedBy: qa-test-env-author-workflow
+
+spec:
+  stack: other
+
+  entrypoint:
+    compose:
+      file: docker-compose.yml
+
+  tests:
+    command: pytest
+    timeoutSec: 600
+    components:
+      - name: backend
+        service: app
+        workingDir: backend
+        command: pytest
+      - name: frontend
+        service: app
+        workingDir: frontend
+        command: npm test
+
+  environment:
+    PYTHONUNBUFFERED: "1"
+    PYTHONDONTWRITEBYTECODE: "1"
+    NODE_ENV: test
