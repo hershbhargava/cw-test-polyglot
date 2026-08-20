@@ -1,0 +1,29 @@
+apiVersion: coweave.ai/v2
+kind: TestEnvironment
+
+metadata:
+  generatedBy: qa-manifest-author-workflow (issue-1, iteration-2)
+  generatedAt: 2026-08-20T06:24:00.000Z
+
+spec:
+  stack: other
+  entrypoint:
+    compose:
+      file: ./docker-compose.yml
+  tests:
+    command: pytest
+    timeoutSec: 600
+    components:
+      - name: backend
+        service: backend
+        workingDir: backend
+        command: pytest
+      - name: frontend
+        service: frontend
+        workingDir: frontend
+        command: npm test
+  environment:
+    PYTHONDONTWRITEBYTECODE: "1"
+    NODE_ENV: test
+  secrets: []
+  requiredServices: []
