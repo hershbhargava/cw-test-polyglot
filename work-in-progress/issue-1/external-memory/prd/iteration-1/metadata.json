@@ -1,0 +1,27 @@
+{
+  "iteration": 1,
+  "role": "prd-generator-ai",
+  "status": "completed",
+  "workflow_mode": "new_feature_or_bug_fix",
+  "timestamp": "2026-08-20T06:19:13Z",
+  "prd_name": "Add a multiply operation to backend and frontend",
+  "design_mode": "NEW_FEATURE_OR_BUG_FIX",
+  "depth_mode": "detailed",
+  "scores": {
+    "coverage_score": 95,
+    "answer_quality_score": null,
+    "confidence_score": 90,
+    "quality_score": 92
+  },
+  "word_count": 2156,
+  "sections_count": 10,
+  "assumptions_count": 2,
+  "open_questions_count": 3,
+  "input_documents": ["/persistent/git-workspaces/hershbhargava/cw-test-polyglot/issue-1/repos/hershbhargava/cw-test-polyglot/hershbhargava/cw-test-polyglot/issues/issue-1.json"],
+  "files_created": [
+    "docs/requirements/PRD_DELTA_issue-1.md",
+    "work-in-progress/issue-1/external-memory/prd/iteration-1/GITHUB_COMMENT.md",
+    "work-in-progress/issue-1/external-memory/prd/iteration-1/metadata.json"
+  ],
+  "commit_hash": ""
+}
