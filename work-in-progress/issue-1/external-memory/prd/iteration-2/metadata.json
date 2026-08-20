@@ -32,6 +32,6 @@
       "ci-cd (.github / IaC / k8s)": "not_present"
     }
   },
-  "commit_hash": "6c077f7e4597b9fd9f6f9bfcf53499bda025923e",
+  "commit_hash": "ecc9eb8ea5dbad12cf5b710dcc1f330223ed2c29",
   "iteration_mode": "CE_STUDIO"
 }
