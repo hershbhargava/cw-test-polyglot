@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "downloaded_at": "2026-08-20T06:19:13.879Z",
+    "downloaded_at": "2026-08-20T08:00:50.131Z",
     "owner": "hershbhargava",
     "repository": "cw-test-polyglot",
     "issue_number": "1",
@@ -8,7 +8,7 @@
     "save_location": "/persistent/git-workspaces/hershbhargava/cw-test-polyglot/issue-1/repos/hershbhargava/cw-test-polyglot/hershbhargava/cw-test-polyglot/issues",
     "issue_file_path": "/persistent/git-workspaces/hershbhargava/cw-test-polyglot/issue-1/repos/hershbhargava/cw-test-polyglot/hershbhargava/cw-test-polyglot/issues/issue-1.json",
     "max_comments": 1,
-    "total_comments": 1,
+    "total_comments": 3,
     "comments_included": 1
   },
   "issue": {
@@ -48,9 +48,9 @@
     "locked": false,
     "assignees": [],
     "milestone": null,
-    "comments": 0,
+    "comments": 3,
     "created_at": "2026-08-20T05:41:15Z",
-    "updated_at": "2026-08-20T05:41:15Z",
+    "updated_at": "2026-08-20T06:58:44Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "OWNER",
@@ -86,7 +86,53 @@
     "pinned_comment": null
   },
   "comments": [
-    {}
+    {
+      "url": "https://api.github.com/repos/hershbhargava/cw-test-polyglot/issues/comments/5352507862",
+      "html_url": "https://github.com/hershbhargava/cw-test-polyglot/issues/1#issuecomment-5352507862",
+      "issue_url": "https://api.github.com/repos/hershbhargava/cw-test-polyglot/issues/1",
+      "id": 5352507862,
+      "node_id": "IC_kwDOT9Iw7M8AAAABPwjJ1g",
+      "user": {
+        "login": "hershbhargava",
+        "id": 22163465,
+        "node_id": "MDQ6VXNlcjIyMTYzNDY1",
+        "avatar_url": "https://avatars.githubusercontent.com/u/22163465?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/hershbhargava",
+        "html_url": "https://github.com/hershbhargava",
+        "followers_url": "https://api.github.com/users/hershbhargava/followers",
+        "following_url": "https://api.github.com/users/hershbhargava/following{/other_user}",
+        "gists_url": "https://api.github.com/users/hershbhargava/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/hershbhargava/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/hershbhargava/subscriptions",
+        "organizations_url": "https://api.github.com/users/hershbhargava/orgs",
+        "repos_url": "https://api.github.com/users/hershbhargava/repos",
+        "events_url": "https://api.github.com/users/hershbhargava/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/hershbhargava/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "created_at": "2026-08-20T06:58:44Z",
+      "updated_at": "2026-08-20T06:58:44Z",
+      "body": "## 🏗️ Reverse-engineered documentation — iteration 2\n\n**Scope**: this tier\n**Commit**: `3dff4247`\n**Quality**: 95%\n\n### 📄 Documents reconstructed (5)\n- `docs/design/TDD.md`\n- `docs/design/technical/SYSTEM_ARCHITECTURE.md`\n- `docs/design/technical/API_CONTRACTS.md`\n- `docs/design/technical/SECURITY_DESIGN.md`\n- `docs/design/technical/DEPLOYMENT_STRATEGY.md`\n\n*Automated by CoWeave Architect (reverse-engineering).*",
+      "author_association": "OWNER",
+      "pin": null,
+      "reactions": {
+        "url": "https://api.github.com/repos/hershbhargava/cw-test-polyglot/issues/comments/5352507862/reactions",
+        "total_count": 0,
+        "+1": 0,
+        "-1": 0,
+        "laugh": 0,
+        "hooray": 0,
+        "confused": 0,
+        "heart": 0,
+        "rocket": 0,
+        "eyes": 0
+      },
+      "performed_via_github_app": null,
+      "minimized": null
+    }
   ],
   "attachments_found": 0,
   "attachments": []
