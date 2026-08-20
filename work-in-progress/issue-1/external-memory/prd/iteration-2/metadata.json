@@ -1,37 +1,48 @@
 {
   "iteration": 2,
-  "role": "architect-ai",
+  "role": "prd-generator-ai",
   "status": "completed",
-  "timestamp": "2026-08-20T06:53:50.987Z",
-  "primary_issue": 1,
-  "issues_designed": [1],
-  "design_mode": "reverse_engineer",
-  "mode": "REVERSE_ENGINEER",
-  "quality_score": 95,
-  "files_created": [
-    "docs/design/TDD.md",
-    "docs/design/technical/SYSTEM_ARCHITECTURE.md",
-    "docs/design/technical/API_CONTRACTS.md",
-    "docs/design/technical/SECURITY_DESIGN.md",
-    "docs/design/technical/DEPLOYMENT_STRATEGY.md"
-  ],
-  "files_omitted": [
-    {
-      "file": "docs/design/technical/DATABASE_SCHEMA.md",
-      "reason": "Not applicable - no persistence layer (no DB, ORM, models, migrations, or seed data anywhere in the tree)."
-    }
-  ],
-  "coverage": {
-    "total_size_estimate": "tiny (7 source/config files across 2 components + QA harness)",
-    "fully_covered_in_this_run": true,
-    "subsystems": {
-      "backend (backend/app.py, test_app.py, requirements.txt)": "covered",
-      "frontend (frontend/src/sum.js, sum.test.js, vite.config.js, package.json)": "covered",
-      "qa-harness (.coweave/manifest.yml, docker-compose.yml)": "covered",
-      "persistence": "not_applicable",
-      "ci-cd (.github / IaC / k8s)": "not_present"
-    }
+  "workflow_mode": "generation",
+  "reverse_engineered": true,
+  "timestamp": "2026-08-20T08:03:11Z",
+  "prd_name": "Add a multiply operation to backend and frontend",
+  "design_mode": "NEW_APPLICATION",
+  "depth_mode": "detailed",
+  "scores": {
+    "coverage_score": 100,
+    "answer_quality_score": null,
+    "confidence_score": 95,
+    "quality_score": 93
   },
-  "commit_hash": "ecc9eb8ea5dbad12cf5b710dcc1f330223ed2c29",
-  "iteration_mode": "CE_STUDIO"
+  "word_count": 2389,
+  "sections_count": 14,
+  "assumptions_count": 9,
+  "open_questions_count": 4,
+  "coverage_ledger": {
+    "note": "Tiny repo (7 source/config files across 2 components + QA harness). Fully covered in this run.",
+    "areas": [
+      { "area": "backend/app.py (add, sum_route)", "status": "covered" },
+      { "area": "backend/test_app.py (test_add, test_add_negative)", "status": "covered" },
+      { "area": "backend/requirements.txt (deps)", "status": "covered" },
+      { "area": "frontend/src/sum.js (sum)", "status": "covered" },
+      { "area": "frontend/src/sum.test.js (Vitest suite)", "status": "covered" },
+      { "area": "frontend/package.json + vite.config.js", "status": "covered" },
+      { "area": "docker-compose.yml + .coweave/manifest.yml (QA harness)", "status": "covered" },
+      { "area": "README.md (product purpose)", "status": "covered" },
+      { "area": "docs/design/** (all TDDs)", "status": "covered" }
+    ]
+  },
+  "input_documents": [
+    "/persistent/git-workspaces/hershbhargava/cw-test-polyglot/issue-1/repos/hershbhargava/cw-test-polyglot/hershbhargava/cw-test-polyglot/issues/issue-1.json",
+    "/persistent/git-workspaces/hershbhargava/cw-test-polyglot/issue-1/repos/hershbhargava/cw-test-polyglot/docs/design/TDD.md",
+    "/persistent/git-workspaces/hershbhargava/cw-test-polyglot/issue-1/repos/hershbhargava/cw-test-polyglot/docs/design/technical/SYSTEM_ARCHITECTURE.md",
+    "/persistent/git-workspaces/hershbhargava/cw-test-polyglot/issue-1/repos/hershbhargava/cw-test-polyglot/docs/design/technical/API_CONTRACTS.md",
+    "/persistent/git-workspaces/hershbhargava/cw-test-polyglot/issue-1/repos/hershbhargava/cw-test-polyglot/docs/design/technical/SECURITY_DESIGN.md",
+    "/persistent/git-workspaces/hershbhargava/cw-test-polyglot/issue-1/repos/hershbhargava/cw-test-polyglot/docs/design/technical/DEPLOYMENT_STRATEGY.md"
+  ],
+  "files_created": [
+    "docs/requirements/PRD.md",
+    "docs/requirements/PRD_issue-1-QandA.md"
+  ],
+  "commit_hash": ""
 }
